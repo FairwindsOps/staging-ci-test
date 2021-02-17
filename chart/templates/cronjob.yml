@@ -42,12 +42,11 @@ spec:
               value: "1"
             {{- end }}
             securityContext:
-              readOnlyRootFilesystem: true
-              allowPrivilegeEscalation: false
-              runAsNonRoot: true
-              runAsUser: 10324
+              readOnlyRootFilesystem: false
+              allowPrivilegeEscalation: true
+              runAsNonRoot: false
               capabilities:
-                drop:
+                add:
                   - ALL
             resources:
               {{- toYaml .Values.job.resources | nindent 14 }}
