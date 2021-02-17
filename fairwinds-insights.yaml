@@ -1,0 +1,19 @@
+options:
+  organization: 0217-2
+  hostname: https://staging.insights.fairwinds.com
+
+  # You may need to set this to 'main'
+  baseBranch: main
+
+# These images will be scanned for vulnerabilities.
+images:
+  docker:
+    - alpine:3.10.0
+
+# These manifests will be scanned for configuration issues.
+manifests:
+  yaml:
+  - ./passing.yaml
+  helm:
+  - name: prod
+    path: ./deploy/chart
