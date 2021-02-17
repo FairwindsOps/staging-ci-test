@@ -12,6 +12,9 @@ images:
 
 # These manifests will be scanned for configuration issues.
 manifests:
+  yaml:
+  - ./passing.yaml
+  - ./failing.yaml
   helm:
   - name: prod
     path: ./chart
