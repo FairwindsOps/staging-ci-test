@@ -16,4 +16,4 @@ manifests:
   - ./passing.yaml
   helm:
   - name: prod
-    path: ./deploy/chart
+    path: ./chart
